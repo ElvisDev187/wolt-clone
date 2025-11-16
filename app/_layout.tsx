@@ -8,7 +8,14 @@ import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutes,
+      retry: 1,
+    },
+  },
+});
 export default function RootLayout() {
   const insets = useSafeAreaInsets();
   let [fontLoaded] = useFonts({

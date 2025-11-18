@@ -32,13 +32,12 @@ export default function Page() {
 
         <Animated.View entering={FadeInDown.delay(300)}>
           <TouchableOpacity style={styles.facebookButton}>
-            <FontAwesome5 name="facebook" size={18} color="#00000" />
+            <FontAwesome5 name="facebook" size={18} color="#000" />
             <Text style={styles.facebookButtonText}>
               Continue with Facebook
             </Text>
           </TouchableOpacity>
         </Animated.View>
-
         <Animated.View entering={FadeInDown.delay(400)}>
           <TouchableOpacity
             style={styles.otherButton}

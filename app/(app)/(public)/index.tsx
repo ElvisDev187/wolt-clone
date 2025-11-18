@@ -32,7 +32,7 @@ export default function Index() {
           <SmooyhInfiniteScroll scrollDirection="down" iconSet="set3" />
         </View>
         <LinearGradient
-          colors={["transparent", "#ffff"]}
+          colors={["transparent", "#ffffff"]}
           style={{
             position: "absolute",
             height: 200,

@@ -8,11 +8,10 @@ const Layout = () => {
         options={{
           title: "Feed",
           headerTitleAlign: "center",
-          contentStyle: { backgroundColor: "#ffff" },
+          contentStyle: { backgroundColor: "#ffffff" },
         }}
       />
     </Stack>
   );
 };
-
 export default Layout;

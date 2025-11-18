@@ -34,7 +34,7 @@ const iconDataSets = {
 };
 
 const ITEM_HEIGHT = 160;
-const SCROLL_SPEED = 20; // pixels per second
+const SCROLL_SPEED = 30; // pixels per second
 const GAP = 10; // gap between items from styles
 
 interface SmoothInfiniteScrollProps {
@@ -78,7 +78,7 @@ const SmoothInfiniteScroll = ({
         false // don't reverse
       );
     }
-  }, [scrollDirection, totalWrapHeight]);
+  }, [scrollDirection, totalWrapHeight, scrollY]);
 
   useAnimatedReaction(
     () => scrollY.value,
@@ -122,7 +122,7 @@ const SmoothInfiniteScroll = ({
 
 const styles = StyleSheet.create({
   container: {
-    gap: 10,
+    gap: GAP,
     paddingVertical: 20,
   },
   iconContainer: {

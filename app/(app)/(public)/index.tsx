@@ -3,6 +3,7 @@ import GoogleAuthButton from "@/components/auth/GoogleAuthButton";
 import SmooyhInfiniteScroll from "@/components/SmooyhInfiniteScroll";
 import { Fonts } from "@/constants/theme";
 import { LinearGradient } from "expo-linear-gradient";
+import { Link } from "expo-router";
 import {
   Image,
   Linking,
@@ -31,7 +32,7 @@ export default function Index() {
           <SmooyhInfiniteScroll scrollDirection="down" iconSet="set3" />
         </View>
         <LinearGradient
-          colors={["transparent", "#ffff"]}
+          colors={["transparent", "#ffffff"]}
           style={{
             position: "absolute",
             height: 200,
@@ -62,9 +63,11 @@ export default function Index() {
             <GoogleAuthButton />
           </Animated.View>
           <Animated.View entering={FadeInDown.delay(300)}>
-            <TouchableOpacity style={styles.otherButton}>
-              <Text style={styles.otherButtonText}>Other options</Text>
-            </TouchableOpacity>
+            <Link href={"/(app)/(public)/other-options"} asChild>
+              <TouchableOpacity style={styles.otherButton}>
+                <Text style={styles.otherButtonText}>Other options</Text>
+              </TouchableOpacity>
+            </Link>
           </Animated.View>
         </View>
         <Animated.View

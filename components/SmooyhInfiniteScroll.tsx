@@ -78,8 +78,7 @@ const SmoothInfiniteScroll = ({
         false // don't reverse
       );
     }
-  }, [scrollDirection, totalWrapHeight, scrollY]);
-
+  }, [scrollDirection, totalWrapHeight]);
   useAnimatedReaction(
     () => scrollY.value,
     (y) => {
@@ -132,7 +131,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 20,
     marginHorizontal: 5,
-    boxShadow: "0px -2px 10px rgba(0, 0, 0, 0.1)",
+    // iOS shadow
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: -2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    // Android shadow
+    elevation: 5,
   },
 });
 export default SmoothInfiniteScroll;

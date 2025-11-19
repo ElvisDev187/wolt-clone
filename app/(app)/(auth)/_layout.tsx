@@ -4,11 +4,9 @@ const Layout = () => {
   return (
     <Stack>
       <Stack.Screen
-        name="index"
+        name="(tabs)"
         options={{
-          title: "Feed",
-          headerTitleAlign: "center",
-          contentStyle: { backgroundColor: "#ffffff" },
+          headerShown: false,
         }}
       />
     </Stack>

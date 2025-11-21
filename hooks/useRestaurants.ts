@@ -7,7 +7,10 @@ import { useQuery } from '@tanstack/react-query';
 export const useRestaurants = () => {
   return useQuery({
     queryKey: ['restaurants'],
-    queryFn: restaurantService.getAll,
+    queryFn: async ()=>{
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      return  restaurantService.getAll();
+    },
   });
 };
 

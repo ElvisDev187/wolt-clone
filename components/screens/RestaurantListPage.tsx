@@ -5,6 +5,7 @@ import Animated from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { CategoryList } from "../CategoryList";
 import RestaurantList from "../RestaurantList";
+const HEIGHT_PADDING = 60;
 
 const RestaurantListPage = () => {
   const insets = useSafeAreaInsets();
@@ -12,7 +13,7 @@ const RestaurantListPage = () => {
     <View style={styles.container}>
       <Animated.ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingTop: 60 + insets.top }}
+        contentContainerStyle={{ paddingTop: HEIGHT_PADDING + insets.top }}
       >
         <Text style={styles.pageTitle}>Restaurants</Text>
         <CategoryList />

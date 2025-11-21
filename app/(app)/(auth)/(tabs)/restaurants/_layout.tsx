@@ -1,12 +1,11 @@
 import { Stack } from "expo-router";
-import React from "react";
 
-const ProfileLayout = () => {
+const Layout = () => {
   return (
     <Stack screenOptions={{ contentStyle: { backgroundColor: "#fff" } }}>
-      <Stack.Screen name="index" />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
     </Stack>
   );
 };
 
-export default ProfileLayout;
+export default Layout;
